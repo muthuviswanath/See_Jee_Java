@@ -1,0 +1,8 @@
+
+public class ATMMachine {
+
+	Money dispense(Card c, int pin, int amount){
+		Money m = new Money();
+		return m;
+	}
+}

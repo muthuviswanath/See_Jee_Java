@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class MenuOptions {
+	
+		boolean isPrime(int n) {
+			int factor = 0;
+			for(int i=1; i<= n; i++) {
+				if(n%i == 0) {
+					factor++;
+				}
+			}
+			return factor==2?true:false;
+		}
+		void sumOfPrimes(int n) {
+			
+			for(int i=2; i<=n; i++) {
+				if(isPrime(i) && isPrime(n-i)) {
+					
+				}
+			}
+		}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		do {
+		System.out.println("1. Express as sum of Primes");
+		System.out.println("2. check whether Emirp & Prime");
+		System.out.println("3. Generate Amstrong");
+		System.out.println("4. Exit");
+		System.out.println("Enter your choice: ");
+		int choice = scan.nextInt();
+		switch(choice) {
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			return;
+			
+		}
+		}while(true);
+		
+	}
+}

@@ -1,0 +1,9 @@
+
+public class Alpha {
+	static String display() {
+		return 'a';	
+	}
+public static void main(String[] args) {
+	
+}
+}

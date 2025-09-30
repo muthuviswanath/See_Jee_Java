@@ -1,0 +1,122 @@
+Software:
+	It is developed using a programming lanuguage to meet a specific
+	goal. It is set of programs that is designed to solve a real world
+	problem or needs.
+
+Java:
+	Statically typed high level Object Oriented programming lanugage
+
+	the datatypes needs to be mentioned before we store any values.
+	All the commands / code that is written is in a language that we as humans speak (English)
+	Orientation means perspective. We persue everything as an object
+
+
+How are you?
+are you? How - not in proper grammar
+
+Kumusta Ka? - What language is this? (Filipino/Taglog)
+				Translator
+How are you?
+
+Compiler - Check for the syntax (grammar)
+Interpreter - Convert the intemediate code to machine understandable code.
+
+Java is both compiled and interpreted
+
+Step 1: OddEven.java
+Step 2: javac OddEven.javac			- 1. ByteCode (.class)
+									- 2. Compilation Error
+Step 3: Execute the code to get converted into another intermediate language. 
+			- 1. Output
+			- 2. Logical Mistake - Runtime Error
+			- 3. Logical Loopholes - Exceptions 
+
+Create a source code and save it as .java
+compile the .java file
+Execute the code
+
+Any text editors and save it as .java
+c:\users\Muthu\Desktop\Test.java
+
+javac c:\users\Muthu\Desktop\Test.java - absolute path
+
+D:\> cd c:\users\Muthu\Desktop
+C:\users\Muthu\Desktop\>javac Test.java - relative path
+
+C:\users\Muthu\Desktop\> dir
+Test.java 			--rx-rw
+Test.class 			--rx-rw 		#bytecode
+
+To Execute:
+C:\users\Muthu\Desktop\>java ClassName
+Hello World!
+C:\users\Muthu\Desktop\>
+
+
+JDK: Java Development Kit
+
+	It is a combination / group of software that contains all the necessary resources required to develop and execute java programs.
+
+	It internally contains Java Runtime Ennvironment (JRE) and other tools : javap, javac, etc...
+
+JRE: Java Runtime Environment
+	
+	It is a set of software tools which are used to execute the java code.
+
+	It is going to provide a runtime environment to execute the java applications
+
+	It is the implmentation of Java Virtual Machine
+	It also consists of libraries that JVM uses at runtime
+
+	JDK contains JRE contains JVM
+
+	JRE can be downloaded separately
+
+JVM: Java Virtual Machine
+
+	It is a set of software  that is implemented on JRE which interacts with the Operating system
+
+	Converts byt code into machine instructions
+	Responsible for allocating the memory space inside RAM
+	
+	Execute the programs that are written in other languages but which got compiled to java byte code.
+
+
+Syntax and the Skeleton to write code
+
+class ClassName{
+	all possible codes
+}
+
+
+Object:
+	It is a real-world physical entity that has mass, that occupies space, that can be touched, seen or experienced and has properties and behaviours.
+
+	Properties are the one that describes the object
+	variables
+
+	Behaviours are the one that tells what action is perfomed
+	methods
+
+	An object can have multiple references.
+
+	For an object to be created, class is required.
+
+	Using a single class, it is possible to create more than one object.
+
+	All those objects looks similar and hence called similar objects.
+
+	If one object is modified or changed, the changes neither affects the other object nor the class.
+
+	To create an object there are 5 ways and the most common way is using "new" keyword.
+
+	Ojects will be created inside the heap memory.
+
+Class:
+
+	Blueprint or plan to create objects.
+
+	It is a logical entity using which the objects are created.
+
+	For the objects to have properties and behaviours, it has to be declared inside a class.
+

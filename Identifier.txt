@@ -1,0 +1,38 @@
+class ClassName{
+	variables (properties/fields)
+	methods (behaviours/action/functionality)
+	constructors
+	blocks
+	class
+	interface
+}
+
+Identifiers:
+	These are names that are given to Java members.
+	class, variable, method, interface, package... identifiers
+
+Identifier Rules:
+
+	1.Can not have numbers to start with but can contain numbers.
+	2.Only $ and _ are the allowed special characters
+	3.If there are more than one words used to form the identifier, then they cannot have white space between them
+	4.Cannot be a java keyword.
+
+class 5G{ } not valid
+class South America{} - invalid
+class House# {} - invalid
+class if {} - invalid
+class java{} - valid
+class javac{} - valid
+
+Naming Conventions:
+
+	Class
+
+	1. It should be a noun
+	2. Avoid acronyms
+	3. If it involves more than one word, use the Upper Camel Case
+
+	class SouthAfrica{
+	
+	}

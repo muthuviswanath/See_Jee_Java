@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class MenuOptions {
+	
+	static int pow(int base, int exp) {
+		int res = base;
+		for(int i=exp; i>=1; i--) {
+			res *= res;
+		}
+	}
+
+	static boolean isPrime(int n) {
+		int factor = 0;
+		for(int i=1; i<= n; i++) {
+			if(n%i == 0) {
+				factor++;
+			}
+		}
+		return factor==2?true:false;
+	}
+	static void sumOfPrimes(int n) {
+
+		for(int i=2; i<=n; i++) {
+			if(isPrime(i) && isPrime(n-i)) {
+				System.out.println(n + " = " + i + " + " + (n-i));
+			}
+		}
+	}
+
+	static int reverseNum(int n) {
+		int result = 0;
+		while (n!=0) {
+			int digit = n % 10;
+			result = result * 10 + digit;
+			n/=10;
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		do {
+			System.out.println("1. Express as sum of Primes");
+			System.out.println("2. check whether Emirp & Prime");
+			System.out.println("3. Generate Amstrong");
+			System.out.println("4. Exit");
+			System.out.println("Enter your choice: ");
+			int choice = scan.nextInt();
+			switch(choice) {
+			case 1:
+				System.out.println("Enter a number: ");
+				int num = scan.nextInt();
+				sumOfPrimes(num);
+				break;
+			case 2:
+				System.out.println("Enter a number: ");
+				int gnum = scan.nextInt();
+				int result = reverseNum(gnum);
+				if(isPrime(gnum) && isPrime(result)) {
+					System.out.println("Given number is Both Prime & Emirp");
+				}
+				else {System.out.println("No");}
+				break;
+			case 3:
+				break;
+			case 4:
+				return;
+
+			}
+		}while(true);
+
+	}
+}

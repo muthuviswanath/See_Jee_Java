@@ -1,0 +1,17 @@
+
+public class Zigzag {
+	public static void main(String[] args) {
+		int a[] = {12,23,34,56,28,11};
+		int b[] = {11,56,33,98,67,22,56,78};
+		int c[] = new int[a.length + b.length];
+		
+		int i, j, k = 0;
+		while(i<a.length && j < b.length) {
+			c[k++] = a[i++];
+			c[k++] = b[j++];
+		}
+		while(i<a.length) {
+			c[k++] = a[i++];
+		}
+	}
+}

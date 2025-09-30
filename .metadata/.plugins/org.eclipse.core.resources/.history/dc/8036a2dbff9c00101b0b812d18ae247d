@@ -1,0 +1,7 @@
+
+public class ATMMachine {
+
+	Money dispense(Card c, int pin, int amount){
+		retun new Money();
+	}
+}

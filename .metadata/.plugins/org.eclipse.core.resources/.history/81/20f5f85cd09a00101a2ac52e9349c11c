@@ -1,0 +1,10 @@
+
+public class Alpha {
+	static char display() {
+		char c = 'B';
+		return c;
+	}
+public static void main(String[] args) {
+	
+}
+}

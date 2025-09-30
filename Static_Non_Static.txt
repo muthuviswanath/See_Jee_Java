@@ -1,0 +1,13 @@
+class Alpha{
+	int age = 10; 
+	
+	// non-static or instance variable
+	// The no.of copies of instance variable is directly proportional to the number // of objects. If there are 2 objects then there will be two copies.
+
+	static int height = 6; 
+
+	// static variable
+	//Irrespective of the number of instances (objects) there will only be one copy // of static variables.
+
+}
+

@@ -1,0 +1,10 @@
+						
+						non-static context (methods)		static context(methods)
+
+static variable			call directly						call directly
+
+static methods			call directly						call directly
+
+non-static varaible		call directly						object reference
+
+non-static method		call directly						object reference

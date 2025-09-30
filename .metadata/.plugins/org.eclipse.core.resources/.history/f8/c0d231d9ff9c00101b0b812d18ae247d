@@ -1,0 +1,9 @@
+
+public class ATMMachine {
+
+	Money dispense(Card c, int pin, int amount){
+		Money m = new Money();
+		System.out.println(m);
+		return m;
+	}
+}
