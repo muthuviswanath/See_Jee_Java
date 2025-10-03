@@ -9,6 +9,5 @@ public class StringIntro {
         String possible = new String("Possibility");
         System.out.println(possible);
 
-\
     }
 }
