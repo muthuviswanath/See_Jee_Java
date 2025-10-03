@@ -64,6 +64,7 @@ public class MenuOptions {
 			System.out.println("4. Exit");
 			System.out.println("Enter your choice: ");
 			int choice = scan.nextInt();
+			scan.close();
 			switch(choice) {
 			case 1:
 				System.out.println("Enter a number: ");
@@ -86,6 +87,6 @@ public class MenuOptions {
 
 			}
 		}while(true);
-
+		
 	}
 }

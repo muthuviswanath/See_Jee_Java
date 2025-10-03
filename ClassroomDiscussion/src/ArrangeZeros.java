@@ -1,44 +1,44 @@
-import java.util.Arrays;
+// import java.util.Arrays;
 
-public class ArrangeZeros {
-/*
- * 1. Find the max and min in a given Array
- * 2. Count and find the sum of odd elements and even elements in the given array
- * 3. Check and inform whether the array is sorted or not
- * 4. Find the duplicate element in the array
- * 5. Move all the zeroes to the end without changing the order.
- * 6. Rotate the array by k positions left and right
- * 7. Find whether two arrays are equal (Frequency Wise also)
- * 8. Find all the possible pairs for a given sum
- * 
- * */
-	//1. Find the max and min in a given Array
-	void findMaxMin(int arr[]) {
-		Arrays.sort(arr);
-		System.out.println("Maximum Element: " + arr[arr.length-1]);
-		System.out.println("Minimum Element: " + arr[0]);
-	}
-	void oddEvenOps(int arr[]) {
-		int odd_count =0, odd_sum = 0;
-		int even_count =0, even_sum = 0;
-		for(int i=0; i<arr.length; i++) {
-			if(arr[i]%2==0) {
-				even_count += 1;
-				even_sum += arr[i];
-			}
-			else {
-				odd_count += 1;
-				odd_sum += arr[i];
-			}
-		}
-	}
+// public class ArrangeZeros {
+// /*
+//  * 1. Find the max and min in a given Array
+//  * 2. Count and find the sum of odd elements and even elements in the given array
+//  * 3. Check and inform whether the array is sorted or not
+//  * 4. Find the duplicate element in the array
+//  * 5. Move all the zeroes to the end without changing the order.
+//  * 6. Rotate the array by k positions left and right
+//  * 7. Find whether two arrays are equal (Frequency Wise also)
+//  * 8. Find all the possible pairs for a given sum
+//  * 
+//  * */
+// 	//1. Find the max and min in a given Array
+// 	void findMaxMin(int arr[]) {
+// 		Arrays.sort(arr);
+// 		System.out.println("Maximum Element: " + arr[arr.length-1]);
+// 		System.out.println("Minimum Element: " + arr[0]);
+// 	}
+// 	void oddEvenOps(int arr[]) {
+// 		int odd_count =0, odd_sum = 0;
+// 		int even_count =0, even_sum = 0;
+// 		for(int i=0; i<arr.length; i++) {
+// 			if(arr[i]%2==0) {
+// 				even_count += 1;
+// 				even_sum += arr[i];
+// 			}
+// 			else {
+// 				odd_count += 1;
+// 				odd_sum += arr[i];
+// 			}
+// 		}
+// 	}
 	
-	boolean isSortedArray(int arr[]) {
-		for(int i=1; i<arr.length; i++) {
-			if (arr[i] < arr[i-1]) {
-				return true;
-			} 
-		}
-		return false;
-	}
-}
+// 	boolean isSortedArray(int arr[]) {
+// 		for(int i=1; i<arr.length; i++) {
+// 			if (arr[i] < arr[i-1]) {
+// 				return true;
+// 			} 
+// 		}
+// 		return false;
+// 	}
+// }

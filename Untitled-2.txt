@@ -1,0 +1,7 @@
+// Toggle the case of each characters in a given string
+// Count the number of vowels and consonants in a given string
+// Remove all the white spaces in the string and display It
+// Check if two strings are anagram of each other
+// Find the most frequent word in a given sentence
+// Find the first non-repeating character in the given word
+madamcurie
