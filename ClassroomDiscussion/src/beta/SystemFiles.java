@@ -1,9 +1,15 @@
 package beta;
 
 public class SystemFiles {
-        String filename;
+    String filename;
     String fileType;
     int fileSize;
+
+    SystemFiles(String filename, String fileType, int fileSize){
+        this.filename = filename;
+        this.fileType = fileType;
+        this.fileSize = fileSize;
+    }
 
     void displayFileInfo(){
         System.out.println("File Name: " + filename);
