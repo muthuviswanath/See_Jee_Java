@@ -1,0 +1,6 @@
+Aggregation:
+    It is a type of Association where the associated object continues to exist without the owner object.
+    It is a weak has-a relationship (loosely coupled)
+Composition
+    It is a type of Association where the associated object cease to exist without the owner object.
+    It ia a strong has-a relationship (tightly coupled)

@@ -1,0 +1,27 @@
+                                            Inside a package
+                
+                Inside the same class       Outside the class       
+
+                                             Through Object Creation        Through Inheritance
+public              direct access               direct access               direct access
+
+protected           direct access               direct access               direct access
+
+default             direct access               direct access               direct access
+
+private             direct access               not accessible              not accessible
+
+
+                                            Outside a package
+                
+                                    Outside the class       
+
+                Through Object Creation        Through Inheritance
+
+public              Possible                    Possible
+
+protected           No                          Possible
+
+default             No                          No
+
+private             No                          No

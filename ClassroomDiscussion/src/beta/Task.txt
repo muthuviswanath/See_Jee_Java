@@ -1,0 +1,3 @@
+Create a class called OperatingSystem and create the object of Photoshop and pass different files to the method
+openFile such that based on the object that is passed as the parameter, the individual sub class behaviours
+are called.

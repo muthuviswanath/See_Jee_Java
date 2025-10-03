@@ -1,0 +1,9 @@
+Encapsulation:
+    Binding the data memebers and the data handlers together in order to
+    achieve, role based access to set the values, data validation, data hiding
+    , read only functionality is called Encapsulation
+
+    To achieve Encapsulation, the data members (variables) are to be private
+    It is also called as Bean Class
+    Also called POJO class (Plain Old Java Object)
+
