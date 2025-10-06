@@ -1,0 +1,22 @@
+Create the following Payment Gateway Interfaces (PGIs)and a menu driven code where, the user
+is given a choice to choose from the payment gateway interface to make their payment.
+
+RazorPay
+Stripe
+CCAvenue
+
+The money in thier acount has to get reduced based on the amount they've paid using the PGI of their choice
+
+1. Create Products
+2. Add Products to Cart
+3. Make Payment
+4. Check Balance
+5. Exit
+
+3
+1. RazorPay
+2. CCAvenue
+1. Total Amount to be paid: 15000
+Do you want to pay (Y/N)
+4. 50000
+4. 35000
