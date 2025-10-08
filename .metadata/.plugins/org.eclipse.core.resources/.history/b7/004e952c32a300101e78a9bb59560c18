@@ -1,0 +1,8 @@
+package payrolltask;
+
+public class Employee {
+	private int empId;
+	private String empName;
+	private String department;
+	private double salary;
+}

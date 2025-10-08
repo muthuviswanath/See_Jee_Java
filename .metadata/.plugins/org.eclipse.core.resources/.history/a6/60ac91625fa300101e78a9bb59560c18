@@ -1,0 +1,16 @@
+package payrolltask;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetDemo {
+	public static void main(String[] args) {
+		Set<Integer> s = new HashSet<Integer>();
+		s.add(12);
+		s.add(null);
+		s.add(122);
+		s.add(12);
+		s.add(12);
+		System.out.println(s);
+	}
+}

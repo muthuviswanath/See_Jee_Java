@@ -1,0 +1,36 @@
+package generics;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class ArrayListDemo {
+	// void add(int index, E element)
+	// boolean add(Element e)
+	// boolean addAll(Collection <? extends E> c)
+	// boolean addAll(int index, Collectio <? extends E> c)
+	// E get(int index)
+	// int indexOf(Object o)
+	// E remove(int index)
+	// boolean remove(Object o)
+	public static void main(String[] args) {
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		al.add(10);
+		al.add(10);
+		al.add(20);
+		al.add(2);
+		System.out.println("Before Removal");
+		System.out.println(al);
+		al.remove(2);
+		System.out.println("After Removal");
+		System.out.println(al);
+	}
+}
+
+
+
+
+
+
+
+
+

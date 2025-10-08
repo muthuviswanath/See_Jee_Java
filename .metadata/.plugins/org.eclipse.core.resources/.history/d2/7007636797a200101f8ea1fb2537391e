@@ -1,0 +1,16 @@
+package generics;
+public class TestAlpha{
+    public static void main(String[] args) {
+        Alpha <String> a = new Alpha <String>("Emp123");
+        a.display();
+        
+        int abcd = 12345;
+        Integer d = Integer.valueOf(abcd);
+        int k = Integer.reverse(d);
+        
+        Alpha <Integer> al = new Alpha<Integer> (1234);
+        a.display();
+        
+        
+    }
+}

@@ -1,0 +1,16 @@
+Linked List:
+Doubly is implemented
+
+			<<interface>>
+			collection
+			
+			<<interface>>
+			list
+			
+			
+			
+			
+			
+			
+			
+	LinkList extends AbstractSequentialList implements Dequeue

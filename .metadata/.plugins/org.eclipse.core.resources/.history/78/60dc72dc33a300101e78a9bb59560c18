@@ -1,0 +1,11 @@
+package payrolltask;
+
+import java.util.ArrayList;
+
+public class PayrollManager {
+	private ArrayList<Employee> payroll;
+	
+	public PayrollManager() {
+		payroll = new ArrayList<Employee>();
+	}
+}

@@ -1,0 +1,16 @@
+package generics;
+
+public class Alpha <Krish, Gokul, Muthu, Nonsense> {
+    public Krish empid;
+    public Gokul empName;
+    public Muthu salary;
+    public Nonsense department;
+
+    Alpha(T empid){
+        this.empid = empid;
+    }
+
+    void display(){
+        System.out.println(this.empid);
+    }
+}

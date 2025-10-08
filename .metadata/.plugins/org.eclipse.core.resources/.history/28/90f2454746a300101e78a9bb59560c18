@@ -1,0 +1,90 @@
+package generics;
+
+import java.util.Scanner;
+
+import payrolltask.PayrollManager;
+
+public class Payroll {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		PayrollManager manager = new PayrollManager();
+		int choice = 0;
+		do {
+			System.out.println("1. Create Payroll");
+			System.out.println("2. Update Payroll");
+			System.out.println("3. Delete Employee");
+			System.out.println("4. Display Records");
+			System.out.println("5. Exit");
+			System.out.println("Enter your choice:");
+			choice= scan.nextInt();
+			switch(choice) {
+			case 1:
+				System.out.println("Enter the employee Id: ");
+				int empid = scan.nextInt();
+				scan.nextLine();//empty or dummy line to handle the bug in scan.nextLine()
+				System.out.println("Enter the employee name: ");
+				String empname= scan.nextLine();
+				System.out.println("Enter the employee department: ");
+				String deptname= scan.nextLine();
+				System.out.println("Enter the employee salary: ");
+				double salary = scan.nextDouble();
+				manager.createRecord(empid, empname, deptname, salary);
+				break;
+			case 2:
+				System.out.println("1. Update by Department");
+				System.out.println("2. Update by Employee Id");
+				int updatechoice = scan.nextInt();
+				System.out.println("Enter the employee department: ");
+				String update_deptname= scan.nextLine();
+				System.out.println("Enter the employee salary: ");
+				double update_salary = scan.nextDouble();
+				if (updatechoice == 1) {
+					manager.updateByDepartment(update_deptname, update_salary);
+				}
+				else if (updatechoice == 2) {
+					System.out.println("Enter the employee Id: ");
+					int upd_empid = scan.nextInt();
+					scan.nextLine();//empty or dummy line to handle the bug in scan.nextLine()
+					System.out.println("Enter the employee name: ");
+					String upd_empname= scan.nextLine();
+					System.out.println("Enter the employee department: ");
+					String upd_deptname= scan.nextLine();
+					System.out.println("Enter the employee salary: ");
+					double upd_salary = scan.nextDouble();
+					manager.updateByEmployeeId(upd_empid, upd_empname, upd_deptname, upd_salary);
+				}
+				else {
+					System.out.println("Invalid update choice");
+				}
+				break;
+			case 3:
+				System.out.println("Enter the employee Id: ");
+				int del_empid = scan.nextInt();
+				manager.deleteEmployeeRecords(del_empid);
+				break;
+			case 4:
+				System.out.println("1. Get All Employee Details");
+				System.out.println("2. Get Employee by Department");
+				System.out.println("3. List Employee getting salary above average");
+				int dispchoice = scan.nextInt();
+				if(dispchoice == 1) {
+					manager.getAllEmpRecord();
+				}
+				else if(dispchoice == 2) {
+					System.out.println("Enter the employee department to search: ");
+					String get_deptname= scan.nextLine();
+					manager.getEmpByDepartment(get_deptname);
+				}
+				else if(dispchoice == 3) {
+					manager.displayRecordsAboveAvgSalary();
+				}
+				break;
+			case 5:
+				System.out.println("Thank you. Good Night");
+				return;
+			}
+			
+			
+		}while(choice !=5);
+	}
+}

@@ -1,0 +1,17 @@
+package payrolltask;
+
+public class Employee {
+	private int empId;
+	private String empName;
+	private String department;
+	private double salary;
+	
+	public Employee(int empId, String empName, String department, double salary) {
+		this.empId = empId;
+		this.empName = empName;
+		this.department = department;
+		this.salary = salary;
+	}
+	
+	
+}

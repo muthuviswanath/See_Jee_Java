@@ -1,0 +1,20 @@
+
+public class MultipleCatch {
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 0;
+		String s = "Capgemini";
+		try {
+		System.out.println(a/b);
+		System.out.println(s.charAt(10));
+		}
+		catch (ArithmeticException e) {
+			b = 2;
+			System.out.println(a/b);
+		}
+		catch (StringIndexOutOfBoundsException ss) {
+			ss.printStackTrace();
+		}
+		System.out.println("Will my String's charAt method() get executed?");
+	}
+}

@@ -1,0 +1,9 @@
+package payrolltask;
+
+import java.util.LinkedList;
+
+public class LListDemo {
+public static void main(String[] args) {
+	LinkedList<E>
+}
+}

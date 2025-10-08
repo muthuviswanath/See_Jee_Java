@@ -1,0 +1,33 @@
+package generics;
+
+import java.util.Scanner;
+
+import payrolltask.PayrollManager;
+
+public class Payroll {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		PayrollManager manager = new PayrollManager();
+		do {
+			System.out.println("1. Create Payroll");
+			System.out.println("2. Update Payroll");
+			System.out.println("3. Delete Employee");
+			System.out.println("4. Display Records");
+			System.out.println("5. Exit");
+			System.out.println("Enter your choice:");
+			int choice = scan.nextInt();
+			switch(choice) {
+			case 1:
+				System.out.println("Enter the employee Id: ");
+				int empid = scan.nextInt();
+				System.out.println("Enter the employee name: ");
+				int empid = scan.nextLine();
+				System.out.println("Enter the employee department: ");
+				System.out.println("Enter the employee salary: ");
+				manager.createRecord(choice, null, null, choice);
+			}
+			
+			
+		}while(true);
+	}
+}

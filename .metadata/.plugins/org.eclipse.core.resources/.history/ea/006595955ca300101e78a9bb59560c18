@@ -1,0 +1,14 @@
+package payrolltask;
+
+import java.util.Stack;
+
+public class StackDemo {
+public static void main(String[] args) {
+	Stack<Integer> s = new Stack<Integer>();
+	s.push(23);
+	s.push(22);
+	s.push(21);
+	s.push(23);
+	System.out.println(s.search(23));
+}
+}

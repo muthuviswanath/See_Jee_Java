@@ -1,9 +1,0 @@
-
-public class Alpha {
-	static char display() {
-	return 65000;	
-	}
-public static void main(String[] args) {
-	
-}
-}

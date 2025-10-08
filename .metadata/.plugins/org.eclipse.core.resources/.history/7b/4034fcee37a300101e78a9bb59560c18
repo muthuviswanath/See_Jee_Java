@@ -1,0 +1,60 @@
+package payrolltask;
+
+import java.util.ArrayList;
+
+public class PayrollManager {
+	private ArrayList<Employee> payroll;
+	
+	public PayrollManager() {
+		payroll = new ArrayList<Employee>();
+	}
+	public void createRecord(int empId, 
+							 String empName, 
+							 String department, 
+							 double salary) 
+	{
+		for (Employee emp : payroll) {
+			if(emp.getEmpId() == empId) {
+				System.err.println("Error: Employee with the employee id " + empId +
+									" already exisit in the payroll");
+				return;
+			}
+		}
+		Employee emp = new Employee(empId, empName, department, salary);
+		payroll.add(emp);
+		System.out.println("Employee record created successfully");
+		
+	}
+	
+	public void updateByDepartment(String departmentName, double salary) {
+		boolean isfound = false;
+		for(Employee emp: payroll) {
+			if(emp.getDepartment().equalsIgnoreCase(departmentName)) {
+				emp.setSalary(salary);
+				isfound = true;
+			}
+		}
+		if(isfound) {
+			System.out.println("Updated the salary for all the employees in "
+					+ departmentName);
+		}
+		else {
+			System.out.println("No employee records present in department: " + departmentName);
+		}
+	}
+	
+	public void updateByEmployeeId(int empId, 
+			 String empName, 
+			 String department, 
+			 double salary) {
+		for(Employee e: payroll) {
+			if(e.getEmpId() == empId) {
+				e.setEmpName(empName);
+				e.setDepartment(department);
+				e.setSalary(salary);
+				System.out.println("Employee record updated for the employee id: "+ empId);
+				return;
+			}
+		}
+	}
+}

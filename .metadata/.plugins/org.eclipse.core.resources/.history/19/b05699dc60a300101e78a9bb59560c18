@@ -1,0 +1,20 @@
+package payrolltask;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class SetDemo {
+	public static void main(String[] args) {
+		TreeSet<Integer> s = new TreeSet<Integer>();
+		s.add(1244);
+		s.add(121);
+		s.add(122);
+		s.add(1222);
+		s.add(121);
+		System.out.println(s);
+		
+		System.out.println(s.floor(122));
+	}
+}

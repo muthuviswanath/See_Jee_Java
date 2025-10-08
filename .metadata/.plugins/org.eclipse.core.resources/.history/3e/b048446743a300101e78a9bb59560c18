@@ -1,0 +1,17 @@
+package generics;
+
+public class Payroll {
+//Create an arraylist to store the employee details.
+//The operations should be as follows
+	
+	// 1. Create Payroll Records
+	// 2. Update the Payroll
+	//		2.1 Based on Department
+	//      2.2 Based on EmpId
+	// 3. Delete employee from the Payroll
+	// 4. Display the records
+	//		4.1 All the employees
+	//		4.2 Employees of a specific Department
+	//		4.3 Employees getting salary greater than the average salary
+	// 5. Exit
+}

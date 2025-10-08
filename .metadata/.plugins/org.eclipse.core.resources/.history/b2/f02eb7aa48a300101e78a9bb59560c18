@@ -1,0 +1,13 @@
+package payrolltask;
+
+import java.util.LinkedList;
+
+public class LListDemo {
+public static void main(String[] args) {
+	LinkedList<Integer> llist = new LinkedList<Integer>();
+	llist.add(123);
+	llist.addFirst(10);
+	llist.addLast(20);
+	System.out.println(llist);
+}
+}

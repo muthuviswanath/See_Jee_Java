@@ -1,0 +1,8 @@
+package generics;
+
+public class String {
+	public static void main(String[] args) {
+		java.lang.String s = "Welcome";
+		java.lang.String ucase_string = s.toUpperCase();
+	}
+}

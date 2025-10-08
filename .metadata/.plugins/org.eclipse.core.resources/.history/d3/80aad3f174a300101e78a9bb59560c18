@@ -1,0 +1,6 @@
+
+public class IBMRules {
+	String useAppliances = "Employees can use the appliances";
+	
+	
+}

@@ -1,0 +1,20 @@
+package payrolltask;
+
+public class CapGemini {
+	String companyName; 
+	private CapGemini(Object o) {
+		System.out.println("Object");
+	}
+	
+	private CapGemini(double[] arr) {
+		companyName = "Capgemini";
+		System.out.println("Double Array");
+	}
+	public static void main(String[] args) {
+		CapGemini c = new CapGemini(null);
+		System.out.println(c);
+	}
+	
+
+	
+}

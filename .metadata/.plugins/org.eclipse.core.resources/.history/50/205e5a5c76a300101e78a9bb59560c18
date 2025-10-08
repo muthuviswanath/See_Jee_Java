@@ -1,0 +1,21 @@
+
+public class TrainingDays {
+	public static void main(String[] args) {
+		Employee seniors = new Employee("Senior Employee");
+		Employee fresh_grads = new Employee("freshers");
+		IBMRules ibmr = new IBMRules();
+		try {
+		ibmr.access(seniors);
+		}
+		catch(IllegalUsageException i) {
+			System.out.println(i.getMessage());
+		}
+		
+		try {
+			ibmr.access(fresh_grads);
+		}
+		catch(IllegalUsageException i) {
+			System.out.println(i.getMessage());
+		}
+	}
+}

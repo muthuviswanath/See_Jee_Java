@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class ExcepHandle {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int a = s.nextInt();
+		int b = s.nextInt();
+		try {
+		System.out.println(a/b);
+		}
+		catch(ArithmeticException e) {
+			e.printStackTrace();
+		}
+	}
+}

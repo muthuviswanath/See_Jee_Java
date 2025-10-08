@@ -1,0 +1,6 @@
+package generics;
+
+public class ListInterface {
+// public interface List<E> extends Colelction<E>
+// this is how the List interface is declared
+}

@@ -1,0 +1,6 @@
+
+public class IBMRules {
+	String useAppliances = "Employees can use the appliances";
+	
+	//if the employee is fresh grads, and of they try to use it, throw illegalusageexception
+}

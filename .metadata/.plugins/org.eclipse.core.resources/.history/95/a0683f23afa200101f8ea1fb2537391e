@@ -1,0 +1,12 @@
+package generics;
+
+public interface Possible {
+
+	@Override
+}
+
+
+interface Impossible{
+	void run();
+}
+

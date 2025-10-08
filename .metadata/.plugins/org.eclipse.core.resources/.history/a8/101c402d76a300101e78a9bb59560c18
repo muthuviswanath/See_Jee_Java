@@ -1,0 +1,7 @@
+
+public class TrainingDays {
+	public static void main(String[] args) {
+		Employee seniors = new Employee("Senior Employee");
+		Employee fresh_grads = new Employee("freshers");
+	}
+}

@@ -1,0 +1,12 @@
+package generics;
+
+import java.util.Scanner;
+
+import payrolltask.PayrollManager;
+
+public class Payroll {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		PayrollManager manager = new PayrollManager();
+	}
+}

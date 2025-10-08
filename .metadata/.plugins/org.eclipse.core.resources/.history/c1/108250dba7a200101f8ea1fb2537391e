@@ -1,0 +1,31 @@
+package generics;
+
+import java.util.ArrayList;
+
+public class ListInterface {
+// public interface List<E> extends Colelction<E>
+// this is how the List interface is declared
+	
+	//ArrayList
+	// Uses dynamic array to store the data
+	// Shift Operations are involved.
+	// Store the data using indices.
+	// Allows random access.
+	// Duplicates are allowed (more than one null can also be stored)
+	// Maintains Insertion Order
+	// Default initial capacity is 10
+	// Incremental Capacity = (Current Capacity * 3)/2 + 1
+	// Cannot control the growth
+	// 
+	
+	// Constructors of ArrayList
+	// Has 3 constructors
+	// public ArrayList (int intialcapacity)
+	// public ArrayList ()
+	// public ArrayList (Collection <? extends E> c)
+	public static void main(String[] args) {
+		ArrayList <Integer>al = new ArrayList();
+		al.add(10);
+		ArrayList a1 = new ArrayList(al);
+	}
+}

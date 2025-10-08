@@ -1,0 +1,28 @@
+package payrolltask;
+
+import java.util.ArrayList;
+
+public class PayrollManager {
+	private ArrayList<Employee> payroll;
+	
+	public PayrollManager() {
+		payroll = new ArrayList<Employee>();
+	}
+	public void createRecord(int empId, 
+							 String empName, 
+							 String department, 
+							 double salary) 
+	{
+		for (Employee emp : payroll) {
+			if(emp.getEmpId() == empId) {
+				System.err.println("Error: Employee with the employee id " + empId +
+									" already exisit in the payroll");
+				return;
+			}
+		}
+		Employee emp = new Employee(empId, empName, department, salary);
+		payroll.add(emp);
+		System.out.println("Employee record created successfully");
+		
+	}
+}

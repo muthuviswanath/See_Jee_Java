@@ -1,0 +1,9 @@
+package generics;
+public class TestAlpha{
+    public static void main(String[] args) {
+        Alpha <String, String, Integer, Float> a = new Alpha <String, String, Integer, Float>("Emp123");
+        a.display();
+        
+        
+    }
+}

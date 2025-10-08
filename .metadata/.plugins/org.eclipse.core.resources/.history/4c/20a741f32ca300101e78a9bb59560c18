@@ -1,0 +1,102 @@
+package tasks;
+
+import java.util.Scanner;
+
+public class PayrollSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        PayrollManager manager = new PayrollManager();
+        int choice;
+
+        do {
+            System.out.println("\n========== PAYROLL MANAGEMENT SYSTEM ==========");
+            System.out.println("1. Create Payroll Record");
+            System.out.println("2. Update Payroll");
+            System.out.println("3. Delete Employee");
+            System.out.println("4. Display Records");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter Employee ID: ");
+                    int empId = sc.nextInt();
+                    sc.nextLine();
+                    System.out.print("Enter Name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Enter Department: ");
+                    String dept = sc.nextLine();
+                    System.out.print("Enter Salary: ");
+                    double salary = sc.nextDouble();
+                    manager.createRecord(empId, name, dept, salary);
+                    break;
+
+                case 2:
+                    System.out.println("\n2.1 Update by Department");
+                    System.out.println("2.2 Update by Employee ID");
+                    System.out.print("Enter choice: ");
+                    int updateChoice = sc.nextInt();
+                    sc.nextLine();
+
+                    if (updateChoice == 1) {
+                        System.out.print("Enter Department: ");
+                        String department = sc.nextLine();
+                        System.out.print("Enter New Salary: ");
+                        double newSalary = sc.nextDouble();
+                        manager.updateByDepartment(department, newSalary);
+                    } else if (updateChoice == 2) {
+                        System.out.print("Enter Employee ID: ");
+                        int id = sc.nextInt();
+                        sc.nextLine(); // Consume newline
+                        System.out.print("Enter New Name: ");
+                        String newName = sc.nextLine();
+                        System.out.print("Enter New Department: ");
+                        String newDept = sc.nextLine();
+                        System.out.print("Enter New Salary: ");
+                        double newSal = sc.nextDouble();
+                        manager.updateByEmpId(id, newName, newDept, newSal);
+                    } else {
+                        System.out.println("Invalid choice!");
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter Employee ID to delete: ");
+                    int delId = sc.nextInt();
+                    manager.deleteEmployee(delId);
+                    break;
+
+                case 4:
+                    System.out.println("\n4.1 Display All Employees");
+                    System.out.println("4.2 Display by Department");
+                    System.out.println("4.3 Display Employees Above Average Salary");
+                    System.out.print("Enter choice: ");
+                    int displayChoice = sc.nextInt();
+                    sc.nextLine(); // Consume newline
+
+                    if (displayChoice == 1) {
+                        manager.displayAllEmployees();
+                    } else if (displayChoice == 2) {
+                        System.out.print("Enter Department: ");
+                        String searchDept = sc.nextLine();
+                        manager.displayByDepartment(searchDept);
+                    } else if (displayChoice == 3) {
+                        manager.displayAboveAverageSalary();
+                    } else {
+                        System.out.println("Invalid choice!");
+                    }
+                    break;
+
+                case 5:
+                    System.out.println("Exiting... Thank you!");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice! Please try again.");
+            }
+        } while (choice != 5);
+
+        sc.close();
+    }
+}

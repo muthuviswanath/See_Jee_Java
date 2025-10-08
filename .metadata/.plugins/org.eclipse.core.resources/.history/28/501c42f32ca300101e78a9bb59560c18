@@ -1,0 +1,121 @@
+package tasks;
+
+import java.util.ArrayList;
+
+public class PayrollManager {
+    private ArrayList<Employee> payroll;
+
+    public PayrollManager() {
+        payroll = new ArrayList<>();
+    }
+
+    // 1. Create Payroll Record
+    public void createRecord(int empId, String name, String department, double salary) {
+        // Check if employee ID already exists
+        for (Employee emp : payroll) {
+            if (emp.getEmpId() == empId) {
+                System.out.println("Error: Employee ID " + empId + " already exists!");
+                return;
+            }
+        }
+        Employee emp = new Employee(empId, name, department, salary);
+        payroll.add(emp);
+        System.out.println("Employee record created successfully!");
+    }
+
+    // 2.1 Update by Department
+    public void updateByDepartment(String department, double newSalary) {
+        boolean found = false;
+        for (Employee emp : payroll) {
+            if (emp.getDepartment().equalsIgnoreCase(department)) {
+                emp.setSalary(newSalary);
+                found = true;
+            }
+        }
+        if (found) {
+            System.out.println("Updated salary for all employees in " + department + " department.");
+        } else {
+            System.out.println("No employees found in " + department + " department.");
+        }
+    }
+
+    // 2.2 Update by EmpId
+    public void updateByEmpId(int empId, String name, String department, double salary) {
+        for (Employee emp : payroll) {
+            if (emp.getEmpId() == empId) {
+                emp.setName(name);
+                emp.setDepartment(department);
+                emp.setSalary(salary);
+                System.out.println("Employee record updated successfully!");
+                return;
+            }
+        }
+        System.out.println("Employee with ID " + empId + " not found.");
+    }
+
+    // 3. Delete employee from Payroll
+    public void deleteEmployee(int empId) {
+        for (int i = 0; i < payroll.size(); i++) {
+            if (payroll.get(i).getEmpId() == empId) {
+                payroll.remove(i);
+                System.out.println("Employee deleted successfully!");
+                return;
+            }
+        }
+        System.out.println("Employee with ID " + empId + " not found.");
+    }
+
+    // 4.1 Display all employees
+    public void displayAllEmployees() {
+        if (payroll.isEmpty()) {
+            System.out.println("No employees in the payroll.");
+            return;
+        }
+        System.out.println("\n=== ALL EMPLOYEES ===");
+        for (Employee emp : payroll) {
+            System.out.println(emp);
+        }
+    }
+
+    // 4.2 Display employees of specific department
+    public void displayByDepartment(String department) {
+        boolean found = false;
+        System.out.println("\n=== EMPLOYEES IN " + department.toUpperCase() + " DEPARTMENT ===");
+        for (Employee emp : payroll) {
+            if (emp.getDepartment().equalsIgnoreCase(department)) {
+                System.out.println(emp);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No employees found in " + department + " department.");
+        }
+    }
+
+    // 4.3 Display employees with salary greater than average
+    public void displayAboveAverageSalary() {
+        if (payroll.isEmpty()) {
+            System.out.println("No employees in the payroll.");
+            return;
+        }
+
+        double totalSalary = 0;
+        for (Employee emp : payroll) {
+            totalSalary += emp.getSalary();
+        }
+        double avgSalary = totalSalary / payroll.size();
+
+        System.out.println("\n=== EMPLOYEES WITH SALARY ABOVE AVERAGE ($" + 
+                         String.format("%.2f", avgSalary) + ") ===");
+        boolean found = false;
+        for (Employee emp : payroll) {
+            if (emp.getSalary() > avgSalary) {
+                System.out.println(emp);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No employees found with salary above average.");
+        }
+    }
+}

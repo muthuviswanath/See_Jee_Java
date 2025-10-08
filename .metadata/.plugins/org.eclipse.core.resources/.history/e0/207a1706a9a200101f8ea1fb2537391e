@@ -1,0 +1,13 @@
+package generics;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class ArrayListDemo {
+// void add(int index, E element)
+//
+	public static void main(String[] args) {
+		Collection c = new ArrayList();
+		boolean b = c.add(100);
+	}
+}

@@ -1,0 +1,6 @@
+package generics;
+
+public class ArrayListDemo {
+// void add(int index, E element)
+// 
+}

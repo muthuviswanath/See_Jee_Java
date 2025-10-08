@@ -1,0 +1,18 @@
+package payrolltask;
+
+import java.util.Vector;
+
+public class VectorDemo {
+public static void main(String[] args) {
+	Vector<Integer> vect = new Vector<Integer>();
+	vect.addElement(23);
+	vect.add(23);
+	vect.add(22);
+	vect.add(21);
+	vect.add(25);
+	vect.get(1);
+	vect.elementAt(1);
+	
+	
+}
+}

@@ -1,0 +1,12 @@
+package payrolltask;
+
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class QueueDemo {
+public static void main(String[] args) {
+	Queue<Integer> q = PriorityQueue<Integer>();
+	q.add(34);
+	
+}
+}
