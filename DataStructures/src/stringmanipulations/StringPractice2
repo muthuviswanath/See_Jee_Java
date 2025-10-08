@@ -1,0 +1,93 @@
+1. WAP in java to check for a pattern in a given list of patterns and once 
+verified return the list of patterns.
+
+The pattern contains:
+- The first character should be a lowercase alphabet
+- The second character should be a number
+- The third character should be a uppercase alphabet
+- The fourth character should be a number
+- The fifth character should be a lowercase alphabet
+
+
+Sample Input:
+6
+a1B2c
+d11D3
+b2R4f
+1D2g2
+g2T6h
+h7J5i
+
+Sample Output:
+a1B2c
+b2R4f
+g2T6h
+h7J5i
+
+2. WAP in java to count the number of occurrences in the array of strings and return 
+the number of occurrences.
+
+countOccurrence(String[] arr): returns the number of occurrences of the word found in 
+the array of strings.
+
+Sample Input:
+4
+The fox is going into the jungle.
+The lion is the king.
+Fox has jumped over the wall.
+Fox has two friends Gary the fox and Matt the turtle
+Enter the word to be searched: fox
+
+Sample Output:
+4
+
+3. WAP in Java to check if the given strings have alternating 
+vowels and consonants.
+
+The first character should be a vowel.
+The second character should be a consonant.
+The pattern continues alternately for the length of the string.
+Return the list of strings that match this pattern.
+
+Sample Input: 5
+apetuk
+detrwp
+aweyip
+grtypq
+ezovuj
+
+Sample Output:
+apetuk
+aweyip
+ezovuj
+
+4. WAP in Java to find all strings in an array that contain exactly two vowels and three consonants, and return the matching strings.
+
+Sample Input:
+5
+train
+horse
+apple
+brisk
+flute
+
+Sample Output:
+train
+horse
+apple
+flute
+
+5. WAP in Java to check if a given string is a palindrome and count the number of palindromes in an array of strings.
+
+The program should ignore spaces and case sensitivity while checking for palindromes.
+
+Sample Input:
+5
+level
+Madam
+civic
+World
+rotor
+
+Sample Output:
+4
