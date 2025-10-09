@@ -1,0 +1,122 @@
+Longest Substring Without Repeating Characters
+
+Function Signature: int lengthOfLongestSubstring(String s)
+Sample Input: "abcabcbb"
+Sample Output: 3 (The longest substring is "abc".)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Valid Parentheses
+
+Function Signature: boolean isValid(String s)
+Sample Input: "()[]{}"
+Sample Output: true (All parentheses are valid.)
+
+-----------------------------------------------------------------------------------------------------------------
+
+String Compression
+
+Function Signature: String compressString(String s)
+Sample Input: "aabcccccaaa"
+Sample Output: "a2b1c5a3" (The compressed version.)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Group Anagrams
+
+Function Signature: List<List<String>> groupAnagrams(String[] strs)
+Sample Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+Sample Output: [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]] (Grouped anagrams.)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Repeated Substring Pattern
+
+Function Signature: boolean repeatedSubstringPattern(String s)
+Sample Input: "abab"
+Sample Output: true (The string can be constructed from "ab".)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Word Break Problem
+
+Function Signature: boolean wordBreak(String s, List<String> wordDict)
+Sample Input: ("leetcode", ["leet", "code"])
+Sample Output: true (The string can be segmented.)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Finding All Permutations
+
+Function Signature: List<String> permute(String s)
+Sample Input: "abc"
+Sample Output: ["abc", "acb", "bac", "bca", "cab", "cba"] (All unique permutations.)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Count Distinct Substrings
+
+Function Signature: int countDistinctSubstrings(String s)
+Sample Input: "abc"
+Sample Output: 6 (Distinct substrings: "a", "b", "c", "ab", "bc", "abc".)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Longest Palindromic Substring
+
+Function Signature: String longestPalindrome(String s)
+Sample Input: "babad"
+Sample Output: "bab" (The longest palindromic substring.)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Regex-based Text Parser
+
+Function Signature: Map<String, List<String>> parseText(String text, List<String> regexes)
+Sample Input: ("hello 123, world 456", ["\\d+", "\\w+"])
+Sample Output: {"\\d+": ["123", "456"], "\\w+": ["hello", "world"]} (Extracted matches for each regex.)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Email Validator
+
+Function Signature: boolean isValidEmail(String email)
+Description: Write a Java function that uses a regular expression to determine if a given string is a valid email address. Consider common email formats while validating.
+Sample Input: "example@example.com"
+Sample Output: true
+
+-----------------------------------------------------------------------------------------------------------------
+
+Extract Dates
+
+Function Signature: List<String> extractDates(String text)
+Description: Implement a Java method that extracts all dates from a given text. Assume dates are in the format MM/DD/YYYY.
+Sample Input: "Important dates: 01/15/2022, 02/28/2022, and 03/10/2022."
+Sample Output: ["01/15/2022", "02/28/2022", "03/10/2022"]
+
+-----------------------------------------------------------------------------------------------------------------
+
+Phone Number Normalizer
+
+Function Signature: String normalizePhoneNumber(String phone)
+Description: Create a Java function that normalizes a phone number by removing all non-digit characters and formatting it as (XXX) XXX-XXXX. If the input is invalid, return "Invalid Number".
+Sample Input: "(123) 456-7890"
+Sample Output: "(123) 456-7890"
+
+-----------------------------------------------------------------------------------------------------------------
+
+URL Validator
+
+Function Signature: boolean isValidURL(String url)
+Description: Write a Java method that checks if a given string is a valid URL. Use a regular expression to ensure it follows the standard URL format (e.g., http:// or https://).
+Sample Input: "https://www.example.com"
+Sample Output: true
+
+-----------------------------------------------------------------------------------------------------------------
+
+Find Hex Color Codes
+
+Function Signature: List<String> findHexColorCodes(String text)
+Description: Implement a Java function that finds and returns all hexadecimal color codes in a given string. A valid hex color code starts with # followed by six hexadecimal digits.
+Sample Input: "Here are some colors: #FF5733, #C70039, and #900C3F."
+Sample Output: ["#FF5733", "#C70039", "#900C3F"]

@@ -1,0 +1,34 @@
+Implementing a Doubly Linked List for Student Management
+
+Design and implement a doubly linked list in Java to store details of students. 
+Each student should have the following attributes:
+
+Create a Student class having following attributes
+
+- stuID (int)
+- name (String)
+- age (int)
+- percentage (float)
+
+All the variables are private so implement getters and setters, and constructors 
+to initialize them.
+
+Create a Node class to store the details of Student inside the 
+Node using Doubly linked list
+
+Requirements:
+
+- Create a Student class with the above attributes and appropriate constructors, 
+	getters, and setters.
+- Create a DoublyLinkedList class that supports the following operations:
+- Insert a student at the end of the list.
+- Delete a student by Student ID.
+- Search for a student by Student ID and return the student's details.
+- Display all students in the list (from head to tail).
+- Display all students in reverse order (from tail to head).
+- Also display the Student details by sorting their detail on the basis of their 
+	percentage.
+
+Constraints:
+- Use appropriate error handling for cases such as searching for a non-existent 
+student or trying to delete a student that is not in the list.
