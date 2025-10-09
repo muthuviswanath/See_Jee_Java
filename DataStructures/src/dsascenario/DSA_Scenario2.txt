@@ -1,0 +1,64 @@
+Book Store System
+   Design a book store system that allows users to manage and purchase books. 
+   The system should include the following requirements:
+
+Class Definitions
+  Book Class:
+
+Attributes:
+  name (String): The unique name of the book.
+  category (String): The category of the book.
+  pages (int): The number of pages in the book.
+  price (double): The price of the book.
+
+BookShop Class:
+
+Attributes:
+
+  Map<String, Integer> inventory: A map that holds the name of each book and its available quantity.
+  Map<String, Double> prices: A map that holds the name of each book and its available price.
+
+Methods:
+
+  addBook(Book book, int quantity): Adds a specified quantity of a book to the inventory.
+  buyBook(String bookName, int quantity, double moneyPaid): Processes the purchase of books. It should check:
+	- If the book is available in the inventory.
+	- If the requested quantity exceeds the available stock.
+	- If the amount paid is sufficient for the total cost of the books.
+	- The method should return the change if the payment exceeds the total cost.
+	- Use exceptions to handle errors for the above conditions.
+
+Exception Handling
+  The system should throw exceptions with relevant error messages when:
+	- The requested book is not available.
+	- The requested quantity exceeds the available stock.
+	- The amount paid is insufficient.
+	- Use try-catch blocks to catch exceptions and display error messages, ensuring that the program continues to run after an exception.
+
+User Interaction
+  Create a main method that:
+	Allows users to interactively enter the name of the book they wish to buy, 
+	the quantity, 
+	and the amount of money they are paying.
+	Continue prompting for input until the user decides to exit.
+
+Example
+
+Input:
+
+Java Programming, 2, 70
+Mystery Novel, 1, 15
+Java Programming, 5, 150
+exit
+
+Output:
+
+Purchase successful! Change returned: 10.0
+Error: Insufficient funds.
+Error: Requested quantity exceeds available stock.
+
+
+Constraints
+- The system should handle a maximum of 1000 unique book titles.
+- The price of each book should be a positive value.
+- The quantity requested for purchase should be a positive integer.

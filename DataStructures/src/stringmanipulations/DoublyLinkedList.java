@@ -4,3 +4,120 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+public class DoublyLinkedList {
+	private Node head;
+	private Node tail;
+	private int size;
+
+	public int size() {
+		return this.size;
+	}
+
+	public void insertAtEnd(Student stu) {
+		if(stu == null) {
+			System.err.println("Cannot insert a null student");
+			return;
+		}
+		Node node = new Node(stu);
+		if(head == null) {
+			head = tail = node;
+		}
+		else {
+			tail.next = node;
+			node.prev = tail;
+			tail = node;
+		}
+		size++;
+	}
+
+	public boolean deleteById(int stuId) {
+		if(head == null) {
+			System.out.println("There is nothing to delete. The list is empty");
+			return false;
+		}
+		Node current = head;
+		while (current != null) {
+			if(current.data.getStuID() == stuId) {
+				if(current.prev != null)
+					current.prev.next = current.next;
+				else
+					head = current.next;
+
+				if(current.next != null) 
+					current.next.prev = current.prev;
+				else
+					tail = current.prev;
+
+				size--;
+				System.out.println("Removed the student: " + current.data);
+				return true;
+			}
+			current = current.next;
+
+		}
+		System.out.println("Student with the Student Id: "+ stuId + " is not found.");
+		return false;
+	}
+
+	public Student searchById(int stuId) {
+		Node current = head;
+		while (current != null) {
+			if(current.data.getStuID() == stuId) {
+				return current.data;
+			}
+			current = current.next;
+		}
+		return null;
+	}
+
+	public void displayRecordsForward() {
+		if(head == null) {
+			System.out.println("No records present to traverse");
+			return;
+		}
+		System.out.println("Student records from Head -> Tail");
+		Node current = head;
+		while(current != null) {
+			System.out.println(" "+ current.data);
+			current = current.next;
+		}
+
+	}
+
+	public void displayRecordsBackward() {
+		if(tail == null) {
+			System.out.println("No records present to traverse");
+			return;
+		}
+		System.out.println("Student records from Tail -> Head");
+		Node current = tail;
+		while(current != null) {
+			System.out.println(" "+ current.data);
+			current = current.prev;
+		}
+
+	}
+
+	public void displaySortByPercentage(boolean descending) {
+		if(head == null) {
+			System.out.println("The list is empty and cannot be sorted");
+			return;
+		}
+		List<Student> list = new ArrayList<Student>(size);
+		Node current = head;
+		while(current != null) {
+			list.add(current.data);
+			current = current.next;
+		}
+		Comparator<Student> stucomp = Comparator.comparingDouble(Student::getPercentage);
+		if(descending) {
+			stucomp = stucomp.reversed();
+		}
+		list.sort(stucomp);
+
+		System.out.println("Students sorted by Percentage" + (descending ? " Percentage Descreasing": " Percentage Increasing"));
+		for(Student s : list ) {
+			System.out.println(s);
+		}
+	}
+}
